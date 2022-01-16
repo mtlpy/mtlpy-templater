@@ -1,0 +1,16 @@
+
+Thank you for being part of Montréal-Python {number} – {name_en}!
+
+Join the live stream following this URL (do not share):
+{streamyard_url}
+
+Please be there 5 to 10 minutes before the start of the event so we can resolve any last minute technical difficulties. After you join the stream, you can pre-share you screen anytime you want. The MC of the even will decide when to make your screen go live.
+
+Unless you have agreed otherwise with the MC, the speaking order will be the same as the one posted on Meetup:
+{meetup_url}
+
+After the event, you are welcome to join us to the virtual happy hour:
+{happyhour_url}
+
+If don't hesitate to share the Meetup link above and the live stream URL of then event:
+{youtube_url}
