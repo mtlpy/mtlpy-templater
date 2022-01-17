@@ -5,13 +5,16 @@ events. """
 
 import os
 import sys
+import locale
 from argparse import ArgumentParser
+from datetime import datetime
 
 import tomlkit
 
 
-FIELDS = ["number", "name_fr", "name_en", 
-          "youtube_url", "meetup_url", "streamyard_url", "happyhour_url"]
+FIELDS = ["number", "name_fr", "name_en", "date",
+          "youtube_url", "meetup_url", "streamyard_url", "happyhour_url", 
+          "presentations_fr", "presentations_en"]
 HAPPYHOUR_URL = "https://pymtl-meet.fjnr.ca/mp-{number}"
 
 
@@ -37,6 +40,15 @@ def normalize_event(event):
     from the existing data. """
     if not event.get("happyhour_url"):
         event["happyhour_url"] = HAPPYHOUR_URL.format(**event)
+    when = datetime.fromisoformat(event["date"])
+    loc = locale.getlocale()
+    try:
+        locale.setlocale(locale.LC_ALL, "fr_CA")
+        event["month_fr"] = when.strftime("%B")
+        locale.setlocale(locale.LC_ALL, "en_CA")
+        event["month_en"] = when.strftime("%B")        
+    finally:
+        locale.setlocale(locale.LC_ALL, loc)
     return event
 
 
@@ -95,7 +107,8 @@ def main():
 
 
 # TODO:
-# - template for an even toml
+# - default values in new event TOML
+# - combine both FR and EN versions of a template when they are both available
 # - template for the invite for speakers
 
 

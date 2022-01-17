@@ -7,4 +7,4 @@ name = "mtlpy_templater"
 dynamic = ["description", "version"]
 
 [project.scripts]
-mtlpy_template = "mtlpy_templater:main"
+mtlpy_templater = "mtlpy_templater:main"

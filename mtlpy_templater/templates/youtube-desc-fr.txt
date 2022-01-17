@@ -1,0 +1,22 @@
+
+Montréal-Python {number} – {name_fr}
+Rencontre du mois de {month_fr} des Pythoneux et Pythoneuses de Montréal
+
+Au programme:
+{presentations_fr}
+
+Joignez vous à nous sur Slack
+https://mtlpy.org/en/slackin
+Nous sommes dans #meeting
+
+Code de Conduite
+https://mtlpy.org/fr/a-propos/#coc
+
+Apéro Social
+{happyhour_url}
+
+Prochains Événements
+https://www.meetup.com/Montreal-Python/events
+
+Avez-vous des Commentaires?
+mtlpyteam@googlegroups.com
