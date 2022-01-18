@@ -111,7 +111,7 @@ def main():
 # TODO:
 # - default values in new event TOML
 # - combine both FR and EN versions of a template when they are both available
-# - template for the invite for speakers
+# - make it generic enough to use for programming nights and teaching workshops
 
 
 if __name__ == "__main__":
