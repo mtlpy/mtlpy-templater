@@ -40,6 +40,7 @@ def normalize_event(event):
     from the existing data. """
     if not event.get("happyhour_url"):
         event["happyhour_url"] = HAPPYHOUR_URL.format(**event)
+
     when = datetime.fromisoformat(event["date"])
     loc = locale.getlocale()
     try:
@@ -49,6 +50,7 @@ def normalize_event(event):
         event["month_en"] = when.strftime("%B")        
     finally:
         locale.setlocale(locale.LC_ALL, loc)
+
     return event
 
 

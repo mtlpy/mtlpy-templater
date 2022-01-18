@@ -1,0 +1,18 @@
+Thank you for agreeing to be part of Montréal-Python {number} – {name_en}!
+
+The main link of the event are:
+* {meetup_url}
+* {youtube_url}
+
+Feel free to share those broadly.
+
+Here are some guidelines to help you prepare:
+https://docs.google.com/document/d/1uMyM5DQsvTwrBtLgiATrCFydZxyacJ9qaO8C_CylW1Q/edit?usp=sharing
+
+As soon at possible, please give us the following information if it's not already done:
+* a title for the talk;
+* the language of your talk;
+* the target duration of your talk;
+* a 2 to 3 sentences bio of yourself.
+
+Thank you again and we are looking forward to your prensentation at {name_en}! 

@@ -1,0 +1,19 @@
+
+Merci pour votre décision de participer à Montréal-Python {number} – {name_fr}!
+
+Les liens principaux de l'événement sont:
+* {meetup_url}
+* {youtube_url}
+
+On vous encorage à les partager généreusement.
+
+Voici quelques pointeurs pour vous aider à préparer votre présentation (en anglais):
+https://docs.google.com/document/d/1uMyM5DQsvTwrBtLgiATrCFydZxyacJ9qaO8C_CylW1Q/edit?usp=sharing
+
+Dès que possible, veuillez nous communique les informations suivante si ce n'est déjà fait:
+* le titre de votre présentation ;
+* la langue dans laquelle la présentation sera donnéee ;
+* la durée cible de la présentation ;
+* votre biographie en 2 ou 3 phrases.
+
+Merci encore et on a hâte de voir votre présentations à {name_fr}! 

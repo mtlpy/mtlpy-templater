@@ -1,0 +1,16 @@
+
+Merci de participer à Montréal-Python {number} – {name_fr}!
+
+Vous pouvez joindre la diffusion en suivant ce lien (ne pas partager):
+{streamyard_url}
+
+Soyez présent de 5 à 10 minutes avant le début de l'événement afin qu'on puisse régler les difficutés techniques de dernière minute. Une fois que vous avez joins la diffusion, vous pouvez partager votre écran a votre guise. Le/la MC se chargera de l'ajouté au flux au bon moment. 
+
+Si vous n'avez pas décidé autrement avec le/la MC, l'ordre des présentations sera la même que celle indiqué sur Meetup:
+{meetup_url}
+
+Après l'événement, vous êtes invité à vous joindre à nous pour un apéro virtuel:
+{happyhour_url}
+
+N'hésitez pas à partager le lien Meetup ci-haut et l'URL de la diffision en-direct de l'événement:
+{youtube_url}

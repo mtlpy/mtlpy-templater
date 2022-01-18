@@ -12,5 +12,5 @@ Unless you have agreed otherwise with the MC, the speaking order will be the sam
 After the event, you are welcome to join us to the virtual happy hour:
 {happyhour_url}
 
-If don't hesitate to share the Meetup link above and the live stream URL of then event:
+Don't hesitate to share the Meetup link above and the live stream URL of then event:
 {youtube_url}
