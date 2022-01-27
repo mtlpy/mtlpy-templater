@@ -8,6 +8,9 @@ import sys
 import locale
 from argparse import ArgumentParser
 from datetime import datetime
+from collections import defaultdict
+from glob import glob
+from random import shuffle
 
 import tomlkit
 
@@ -16,15 +19,28 @@ FIELDS = ["number", "name_fr", "name_en", "date",
           "youtube_url", "meetup_url", "streamyard_url", "happyhour_url", 
           "presentations_fr", "presentations_en"]
 HAPPYHOUR_URL = "https://pymtl-meet.fjnr.ca/mp-{number}"
-
+TOP_MARKERS = {"fr": "français plus bas", 
+               "en": "English follows"}
 
 def templates_dir():
     return os.path.join(os.path.dirname(__file__), "templates")
 
 
 def list_templates(args): 
+    t_langs = defaultdict(lambda: [])
     templates = os.listdir(templates_dir())
-    print("\n".join(templates))
+
+    # add entries for the templates for which we can do a bilingual aggregate
+    for t in templates:
+        base, ext = os.path.splitext(t)
+        if base.endswith(("-fr", "-en")):
+            base, lang = base.rsplit("-", 1)
+            t_langs[base].append(lang)
+    for basename, langs in t_langs.items():
+        if len(langs) == 2:
+            templates.append(f"{basename}-bilingual")
+
+    print("\n".join(sorted(templates)))
 
 
 def new_event(args):
@@ -63,10 +79,40 @@ def load_event(args):
     return event
 
 
+def bilingual_body(name):
+    """ Join French and English versions of a template in a random order. 
+    
+    The two languages are separated by ugly but unambiguous text markers. 
+    """
+    
+    langs = ["fr", "en"]
+    shuffle(langs)
+    first, second = langs
+    
+    first_glob = name.replace("-bilingual", f"-{first}.*")
+    first_path = glob(os.path.join(templates_dir(), first_glob))[0]
+
+    second_glob = name.replace("-bilingual", f"-{second}.*")
+    second_path = glob(os.path.join(templates_dir(), second_glob))[0]
+
+    segments = [f"-- {TOP_MARKERS[second]} --", 
+                template_body(first_path), 
+                f"== {second.upper()} ==", 
+                template_body(second_path)]
+    return "\n".join(segments)
+
+
 def template_body(name):
-    if not os.path.isfile(name):
-        name = os.path.join(templates_dir(), name)
-    return open(name, "rt").read()
+    if os.path.isfile(name):
+        return open(name, "rt").read()
+    fq_path = os.path.join(templates_dir(), name)   
+    if os.path.isfile(fq_path):
+        return open(fq_path, "rt").read()
+    if name.endswith("-bilingual"):
+        return bilingual_body(name)
+    raise ValueError(f"Don't know where the find to body of template '{name}'. "
+                     "Try specifying a full path or one of the names returned "
+                     "by the list-templates command.")
 
 
 def expand_template(args):
@@ -110,7 +156,6 @@ def main():
 
 # TODO:
 # - default values in new event TOML
-# - combine both FR and EN versions of a template when they are both available
 # - make it generic enough to use for programming nights and teaching workshops
 
 
