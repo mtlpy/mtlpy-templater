@@ -62,8 +62,10 @@ def normalize_event(event):
     try:
         locale.setlocale(locale.LC_ALL, "fr_CA")
         event["month_fr"] = when.strftime("%B")
+        event["date_fr"] = when.strftime("%d %B, %Y à %k:%M")
         locale.setlocale(locale.LC_ALL, "en_CA")
-        event["month_en"] = when.strftime("%B")        
+        event["month_en"] = when.strftime("%B")
+        event["date_en"] = when.strftime("%B %d, %Y at %l:%M %P")
     finally:
         locale.setlocale(locale.LC_ALL, loc)
 

@@ -2,6 +2,6 @@ Bonjour Pythoneuses et Pythoneux,
 
 Nous cherchons des présentatrices et présentateurs pour notre prochaine rencontre: {name_fr}. Si vous avez travaillé sur un projet en Python ou si vous avez utilisé une librairie en Python, venez partager avec notre communauté.
 
-Le rendez-vous se tiendra le {date} (heure de Montréal). Envoyez votre proposition à mtlpyteam@googlegroups.com. Les présentations peuvent durer de 5 à 20 minutes. On accepte toutes les propositions raisonnables, et ce jusqu'à ce que la programmation soit complète. Nous avons hâte de lire votre proposition.
+Le rendez-vous se tiendra le {date_fr} (heure de Montréal). Envoyez votre proposition à mtlpyteam@googlegroups.com. Les présentations peuvent durer de 5 à 20 minutes. On accepte toutes les propositions raisonnables, et ce jusqu'à ce que la programmation soit complète. Nous avons hâte de lire votre proposition.
 
 Tous les détails sur {name_fr} sont sur Meetup: {meetup_url}

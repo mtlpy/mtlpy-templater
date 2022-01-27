@@ -1,6 +1,6 @@
 Dear Pythonistas, 
 We are looking for presenters for our next event: {name_en}. If you have worked on a Python project or used a Python library, come and share with our community.
 
-The meeting will take place on {date} (Montréal time). Send your proposal to mtlpyteam@googlegroups.com. Presentations can last from 5 to 20 minutes. We accept all reasonable proposals until the program is full. We are looking forward to be reading your proposal.
+The meeting will take place on {date_en} (Montréal time). Send your proposal to mtlpyteam@googlegroups.com. Presentations can last from 5 to 20 minutes. We accept all reasonable proposals until the program is full. We are looking forward to be reading your proposal.
 
 All the details about {name_en} are on Meetup: {meetup_url}
