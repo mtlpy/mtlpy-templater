@@ -17,7 +17,7 @@ import tomlkit
 
 FIELDS = ["number", "name_fr", "name_en", "date",
           "youtube_url", "meetup_url", "streamyard_url", "happyhour_url", 
-          "presentations_fr", "presentations_en"]
+          "presentations_fr", "presentations_en", "bios_fr", "bios_en"]
 HAPPYHOUR_URL = "https://pymtl-meet.fjnr.ca/mp-{number}"
 TOP_MARKERS = {"fr": "français plus bas", 
                "en": "English follows"}
@@ -58,6 +58,7 @@ def normalize_event(event):
         event["happyhour_url"] = HAPPYHOUR_URL.format(**event)
 
     when = datetime.fromisoformat(event["date"])
+    event["date"] = when.isoformat(" ", "minutes")
     loc = locale.getlocale()
     try:
         locale.setlocale(locale.LC_ALL, "fr_CA")
