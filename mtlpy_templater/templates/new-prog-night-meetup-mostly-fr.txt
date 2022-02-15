@@ -1,0 +1,36 @@
+Soirée de programmation Montréal-Python #{number} – {topics_short_fr}
+
+-- English follows --
+Êtes-vous tannés de coder tous seuls? On a une solution pour vous!
+
+Montréal-Python organise une soirée d’exercices pratiques en programmation en Python. Probablement l'occasion rêvée de mettre les mains à la pâte en direct avec des humains (même si ça reste à distance): la soirée se déroulera simultanément en vidéo conférence sur Jitsi et en collaboration interactive sur Google Colab.
+
+Au menu: {topics_long_fr} 
+
+Et bien sur le tout dans l’élégante syntaxe de Python et dans la langue de Molière mais aussi dans une ambiance décontractée et informelle où tout le monde est bienvenu. (Les échanges en anglais restent tout à fait possibles, mais la soirée sera essentiellement en français.) Ne sont requis qu’un navigateur web et votre enthousiasme. :-)
+
+Dans tous les cas, on va parler code, on va regarder du code, on va manipuler du code, passer un bon moment et – peut-être – faire un pas de plus pour changer le monde.
+
+Le lien vers les exercices sera fourni ici, environ une semaine avant l’événement.
+
+On se rencontre en vidéo conférence le jour même en suivant le lien suivant: https://pymtl-meet.fjnr.ca/soiree-prog
+
+Si vous avez des questions ou des commentaires sur nos événements ou même si vous désirez nous aider avec l'organisation de nos rencontres, n'hésitez pas à nous contacter par courriel: {org_email} .
+
+-- EN ––
+Are you tired of coding all by yourself? We have a solution for you!
+
+Montréal-Python organizes an evening of hands-on programming exercises with Python. 
+
+That might just be the perfect opportunity to dive in, live with other human beings (although it stays remote): the evening will be held in real-time on both video-conferencing with Jitsi and with live code editing on Google Colab.
+
+On the menu: {topics_long_en}
+
+All of this in Python’s elegant syntax and in Molière's language but also in a cozy and informal ambiance where everyone is welcome. Exchanges in English are totally possible but the evening will be mainly in French. You’ll only need a web browser and your enthusiasm. :-)
+
+In any case, we will talk about code, we will look at code, we will modify code, we will have a good time and will – maybe – make a step forward to change the world.
+
+A link to exercises will be posted here, about one week before the event. We meet on the day of by following this link:
+https://pymtl-meet.fjnr.ca/soiree-prog
+
+If you have questions or comments about our events, or even if you would like to help us organize events, don't be shy and reach us by email: {org_email} .

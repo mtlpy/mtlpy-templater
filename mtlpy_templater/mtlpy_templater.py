@@ -14,13 +14,19 @@ from random import shuffle
 
 import tomlkit
 
-
-FIELDS = ["number", "name_fr", "name_en", "date",
-          "youtube_url", "meetup_url", "streamyard_url", "happyhour_url", 
-          "presentations_fr", "presentations_en", "bios_fr", "bios_en"]
+# "MM" for Monthly Meetings
+MM_FIELDS = ["number", "name_fr", "name_en", "date",
+             "youtube_url", "meetup_url", "streamyard_url", "happyhour_url", 
+             "presentations_fr", "presentations_en", "bios_fr", "bios_en"]
+PROG_NIGHT_FIELDS = ["number", "date", "meetup_url", 
+                     "topics_short_fr", "topics_long_fr", 
+                     "topics_short_en", "topics_long_en"]
+FIELDS_MAP = {"mm": MM_FIELDS, "prog-night": PROG_NIGHT_FIELDS}
 HAPPYHOUR_URL = "https://pymtl-meet.fjnr.ca/mp-{number}"
 TOP_MARKERS = {"fr": "français plus bas", 
                "en": "English follows"}
+
+GLOBALS = {"org_email": "mtlpyteam@googlegroups.com"}
 
 def templates_dir():
     return os.path.join(os.path.dirname(__file__), "templates")
@@ -44,9 +50,15 @@ def list_templates(args):
 
 
 def new_event(args):
+    if args.type in FIELDS_MAP:
+        fields = FIELDS_MAP[args.type]
+    else:
+        types = list(FIELDS_MAP.keys())
+        raise ValueError(f"{args.type} is not a valid event type. "
+                         f"Expecting one of {types}")
     doc = tomlkit.document()
     doc["event"] = {}
-    for key in FIELDS:
+    for key in fields:
         doc["event"][key] = ""
     return doc.as_string()
 
@@ -70,6 +82,7 @@ def normalize_event(event):
     finally:
         locale.setlocale(locale.LC_ALL, loc)
 
+    event.update(GLOBALS)
     return event
 
 
@@ -118,6 +131,13 @@ def template_body(name):
                      "by the list-templates command.")
 
 
+def show_fields(args):
+    event = load_event(args)
+    for key in sorted(event.keys()):
+        val = event[key]
+        print(f"{key}: {val!r}")
+
+
 def expand_template(args):
     event = load_event(args)
     body = template_body(args.template)
@@ -125,20 +145,32 @@ def expand_template(args):
     
 
 def main():
-    parser = ArgumentParser(sys.argv[0], description=__doc__)
+    prog = os.path.basename(sys.argv[0])
+    parser = ArgumentParser(prog, description=__doc__)
     parser.add_argument("-i", "--input", metavar="FILE", 
                         help="Get TOML data about the event in FILE")
     parser.add_argument("-o", "--output", metavar="FILE", 
                         help="Save output to FILE")
     subparsers = parser.add_subparsers(title="commands")
 
-    cmd_parser = subparsers.add_parser('list-templates')
+    cmd_parser = subparsers.add_parser("list-templates", 
+                                       help="list all the available templates")
     cmd_parser.set_defaults(func=list_templates)    
 
-    cmd_parser = subparsers.add_parser('new-event')
+    cmd_parser = subparsers.add_parser("new-event", 
+                                       help="generate a blank TOML file for an event")
+    cmd_parser.add_argument("-t", "--type", metavar="EVENT_TYPE", default="mm",
+                            help="Type of event to generate (mm or prog-night)")
     cmd_parser.set_defaults(func=new_event)    
 
-    cmd_parser = subparsers.add_parser('expand')
+    cmd_parser = subparsers.add_parser("show-fields", 
+                                       help=("show all the fields inside an event file,"
+                                             " including the auto-computed ones."))
+    cmd_parser.set_defaults(func=show_fields)    
+
+    cmd_parser = subparsers.add_parser("expand", 
+                                        help=("expand a template with the values from "
+                                              "an event file"))
     cmd_parser.set_defaults(func=expand_template)    
     cmd_parser.add_argument("template", metavar="TEMPLATE",
                             help="Template to expand")

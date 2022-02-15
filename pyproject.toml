@@ -5,6 +5,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "mtlpy_templater"
 dynamic = ["description", "version"]
+classifiers = ["Private :: Do Not Upload"]
 
 [project.scripts]
 mp-templater = "mtlpy_templater.mtlpy_templater:main"
