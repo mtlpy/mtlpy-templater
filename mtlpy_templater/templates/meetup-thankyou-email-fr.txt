@@ -1,0 +1,11 @@
+Merci d'être venu à Montréal-Python {number} – {name_fr}!
+
+Si vous avez manqué l'événement ou si vous désirez revoir les présentations, la vidéo est archivée ici: {youtube_url}
+
+Suivez nos prochains événements sur Meetup et sur notre site web:
+https://www.meetup.com/Montreal-Python/events/
+{calendar_fr}
+
+Si vous avez des idées de présentation ou si vous voulez nous aider à organiser des événements des plus pythonesques, faites-nous le savoir par courriel: {org_email}
+
+À bientôt, et que le serpent vous apporte du code délectable cette semaine!

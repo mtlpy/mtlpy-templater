@@ -16,7 +16,7 @@ import tomlkit
 
 # "MM" for Monthly Meetings
 MM_FIELDS = ["number", "name_fr", "name_en", "date",
-             "youtube_url", "meetup_url", "streamyard_url", "happyhour_url", 
+             "youtube_url", "meetup_url", "streamyard_url", 
              "presentations_fr", "presentations_en", "bios_fr", "bios_en"]
 PROG_NIGHT_FIELDS = ["number", "date", "meetup_url", 
                      "topics_short_fr", "topics_long_fr", 
@@ -26,7 +26,9 @@ HAPPYHOUR_URL = "https://pymtl-meet.fjnr.ca/mp-{number}"
 TOP_MARKERS = {"fr": "français plus bas", 
                "en": "English follows"}
 
-GLOBALS = {"org_email": "mtlpyteam@googlegroups.com"}
+GLOBALS = {"org_email": "mtlpyteam@googlegroups.com", 
+           "calendar_fr": "https://montrealpython.org/fr/calendrier-2022/",
+           "calendar_en": "https://montrealpython.org/en/calendar-2022/"}
 
 def templates_dir():
     return os.path.join(os.path.dirname(__file__), "templates")
