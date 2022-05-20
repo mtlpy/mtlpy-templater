@@ -4,13 +4,17 @@ Montréal-Python Event Templater
 This project contains utilities to produce common texts that are used for most events.
 
 ## Usage
-First install the dependencies of the package and setup a virtualenv:
+First setup a virtualenv then install the dependencies of the package:
 ```
-pipenv sync
-pipenv shell 
+python3 -m venv .venv
+. .venv/bin/activate
 # OR
-echo "layout pipenv" >> .envrc
+echo "layout python3" >> .envrc
 direnv allow
+```
+
+```
+pip install -r requirements.txt
 ```
 
 Then install the package (-s to symlink to the repository, which auto updates after 

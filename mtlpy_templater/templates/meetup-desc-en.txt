@@ -1,8 +1,14 @@
 {month_en} monthly meeting of the Montréal Pythonistas
 
+
 This meeting will feature:
+
 {presentations_en}
+
 
 Technical presentations will be followed by a virtual happy hour during with we invite all attendees to join us for a video chat.
 
+
 If you would like to present, send us an email: mtlpyteam@googlegroups.com
+
+You can watch this even live on Youtube the day of or watch the recordings afterwards: {youtube_url}
