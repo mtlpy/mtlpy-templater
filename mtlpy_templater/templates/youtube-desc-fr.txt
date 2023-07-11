@@ -16,7 +16,7 @@ Apéro Social
 {happyhour_url}
 
 Prochains Événements
-https://www.meetup.com/Montreal-Python/events
+https://www.meetup.com/montreal-python/events
 
 Avez-vous des Commentaires?
 mtlpyteam@googlegroups.com

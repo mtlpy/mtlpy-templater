@@ -3,7 +3,7 @@ Thank you for attending Montréal-Python {number} – {name_en}!
 If you have missed the event of if you would like to watch the presentations again, the video is archived here: {youtube_url}
 
 Follow our future events on Meetup and on our website:
-https://www.meetup.com/Montreal-Python/events/
+https://www.meetup.com/montreal-python/events/
 {calendar_en}
 
 If you have ideas for a future presentation or if you would like to help us organize very pythonic events, let us know by email: {org_email}

@@ -15,7 +15,7 @@ Happy Hour
 {happyhour_url}
 
 Future Events
-https://www.meetup.com/Montreal-Python/events/
+https://www.meetup.com/montreal-python/events/
 
 Feedback and Comments
 mtlpyteam@googlegroups.com
