@@ -1,0 +1,13 @@
+La rencontre du mois de {month_fr} des Pythoneux et Pythoneuses de Montréal sera Montréal-Python {number} – {name_fr}!
+
+Au programme:
+
+{presentations_fr}
+
+Les présentations techniques seront suivies d'un 5-à-7.
+
+Si vous aimeriez présenter, informez nous par courriel: mtlpyteam@googlegroups.com
+
+Vous pouvez voir cet événement en direct sur Youtube le jour même ou en rediffusion par la suite: [{youtube_url}]({youtube_url}) .
+
+Vous trouverez toutes les informations sur la [page meetup de cet événement]({meetup_url}).
