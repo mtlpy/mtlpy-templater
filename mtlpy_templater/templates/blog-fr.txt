@@ -1,4 +1,4 @@
-La rencontre du mois de {month_fr} des Pythoneux et Pythoneuses de Montréal sera Montréal-Python {number} – {name_fr}!
+La rencontre du mois de {month_fr} des Pythoneux et Pythoneuses de Montréal sera Montréal-Python {number} – {name_fr} le {date_fr}!
 
 Au programme:
 

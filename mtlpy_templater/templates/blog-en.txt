@@ -1,4 +1,4 @@
-The {month_en} monthly meeting of the Montréal Pythonistas is going to be Montréal-Python {number} – {name_en}!
+The {month_en} monthly meeting of the Montréal Pythonistas is going to be Montréal-Python {number} – {name_en} on {date_en}!
 
 This meeting will feature:
 
