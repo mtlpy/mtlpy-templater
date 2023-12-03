@@ -1,13 +1,12 @@
 {month_en} monthly meeting of the Montréal Pythonistas
 
+Doors open 30 minutes before the presentations.
+Opening words: {time_en}.
 
 This meeting will feature:
-
 {presentations_en}
 
-
-Technical presentations will be followed by a virtual happy hour during with we invite all attendees to join us for a video chat.
-
+Technical presentations will be followed by a happy hour on-site or in a nearby venue.
 
 If you would like to present, send us an email: mtlpyteam@googlegroups.com
 

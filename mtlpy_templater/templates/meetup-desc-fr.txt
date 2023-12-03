@@ -1,9 +1,12 @@
 Rencontre du mois de {month_fr} des Pythoneux et Pythoneuses de Montréal
 
+Ouverture des portes 30 minutes avant les présentation.
+Mot d'ouverture: {time_fr}.
+
 Au programme:
 {presentations_fr}
 
-Les présentations techniques seront suivies d'un 5-à-7 virtuel pendant lequel tous les participants sont invités à se joindre à nous en vidéo conférence.
+Les présentations techniques seront suivies d'un apéro social sur place ou dans un établissement proche.
 
 Si vous aimeriez présenter, informez nous par courriel: mtlpyteam@googlegroups.com
 
